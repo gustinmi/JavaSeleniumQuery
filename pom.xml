@@ -14,6 +14,7 @@
         <java.version>1.8</java.version>
         <debug.build>true</debug.build>
         <jettyVersion>9.4.7.v20170914</jettyVersion>
+        <runSuite>com.gustinmi.tests.AllTests.java</runSuite>
     </properties>
     <build>
         <finalName>jSelkju</finalName>
@@ -30,6 +31,16 @@
                     <debuglevel>lines,vars,source</debuglevel>
                 </configuration>
             </plugin>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.20.1</version> 
+            <configuration>
+                <includes>
+                    <include>${runSuite}</include>
+                </includes>
+            </configuration>
+        </plugin>
         </plugins>
     </build>
     <dependencies>

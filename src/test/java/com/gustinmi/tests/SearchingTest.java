@@ -2,7 +2,6 @@ package com.gustinmi.tests;
 
 import java.util.EnumSet;
 import java.util.logging.Logger;
-import org.junit.Ignore;
 import org.junit.Test;
 import com.gustinmi.actions.Actions;
 import com.gustinmi.config.HtmlElementOptions;
@@ -14,7 +13,7 @@ public class SearchingTest extends JTestDriver {
     public static final Logger log = LoggingFactory.loggerForThisClass();
 
     @Test
-    @Ignore
+    //@Ignore
     public void test() throws InterruptedException {
 
         log.info("Search testing");

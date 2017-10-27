@@ -187,6 +187,14 @@ You do not need any IDE or any special librarires. Load wedrivers here :
 
  
 
+After everything is prepared, simple execute
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+mvn clean test
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ 
+
 Some facts about webdriver
 --------------------------
 
