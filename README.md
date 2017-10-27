@@ -4,15 +4,11 @@ JavaSeleniumQuery
 Write Java Selenium Tests in jQuery like syntax and access elements with
 selectors generated right out from browser's Developer tools.
 
- 
-
 ### Element selectors 
 
 Java functions for selecting elements are dressed up to look like jQuery \$
 function. You can select elements on your page in various ways. Following
 selectors are supported:
-
- 
 
 **ID selector**
 
@@ -20,23 +16,17 @@ selectors are supported:
 $("#radioButton")
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- 
-
 **Class selector**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 WebElement cb = $(".cbOne")
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- 
-
 **XPATH selector**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $(”//*[@id=\"resultView\"]/li/article/div/h2/a”)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
- 
 
 **Parent selectors**
 
@@ -52,15 +42,11 @@ List submoduls = table.findElements(By.xpath("id('table2')/div/div/div"));
 
 After element is selected, you manipulate it in various ways:
 
- 
-
 **Click first table row **
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $("//*id/tbody/tr[1]").click();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
- 
 
 **Check the radio or click button**
 
@@ -68,23 +54,17 @@ $("//*id/tbody/tr[1]").click();
 $("#radioButton").click();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- 
-
 **Enter text in input or textarea**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $("#myInput").sendKeys("some text data");
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- 
-
 **Get the attribute value**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 String cssClass = $("#" + moduleName).getAttribute("class");
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
- 
 
 **Select value on dropdown**
 
@@ -93,8 +73,6 @@ WebElement cb = $(".cbOne");
 Select cbSelect = new Select(cb);
 cbSelect.selectByValue("4");
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
- 
 
 **Working with CKEditor**
 
@@ -123,25 +101,19 @@ super.getJse().executeScript("CKEDITOR.instances['" + ckeName + "'].fire('blur')
 When some special actions needs to be executed on browser, and this framework
 does not support it, you can execute arbitrary Javascript easily. For example:
 
- 
-
-Trigger blur on some esoteric component
+**Trigger blur on some esoteric component**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 super.getJse().executeScript("$('.dtEnddate').blur()");
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- 
-
-Scroll to the top of window
+**Scroll to the top of window**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 jse.executeScript("scroll(250, 0)"); 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- 
-
-Scroll to the bottom of page
+**Scroll to the bottom of page**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 jse().executeScript("window.scrollTo(0, document.body.scrollHeight)");
