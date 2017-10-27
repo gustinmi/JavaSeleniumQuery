@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test site</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="data.js"></script>
+</head>
+<body>
+
+<div class="toppusher"></div>
+
+<div class="top-container">
+    <nav class="top-bar" role="navigation">
+        <section class="top-bar-section">
+            <ul>
+                <li><a id="homeBtn" href="#" onclick="window.location.href='index.html';">Home</a></li>
+                <li class="has-dropdown not-click"><a href="#">Navigate</a>
+                    <ul class="dropdown noborder">
+                        <li><a href="#">Edit items</a></li>
+                        <li class="has-dropdown not-click"><a href="#">Administrate contents</a>
+                            <ul class="dropdown noborder">
+                                <li><a href="#">All items</a></li>
+                                <li><a href="#">All categories</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-dropdown not-click"><a href="#">Help</a>
+                    <ul class="dropdown noborder">
+                        <li><a data-open="dummy" href="#">How to add Add</a></li>
+                        <li><a data-open="dummy" href="#">How to edit category</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown not-click"><a href="#">About</a>
+                    <ul class="dropdown noborder">
+                        <li><a data-open="dummy" href="#">About this app</a></li>
+                        <li><a data-open="dummy" href="#">About author</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </nav>
+</div>
+
+<section class="main-content">
+	<div class="contents">
+		<div class="table-row">
+			<input class="search-input js-search-input js-placeholder" type="text" name="q" placeholder="Search all items" autocomplete="off" style="width: 604px;">
+			<button class="buttonSearch" type="button">?</button>
+		</div>
+	</div>
+</section>
+
+<section class="sub-menu"></section>
+
+<section class="section object-details"></section>
+
+<section class="collections"></section>
+
+<section class="dummy" style="display: none;">
+    <div>© Copyright 2011-2017 Mitja Guštin, dipl. fil</div>
+</section>
+
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="common.js"></script>
+<script src="app.js"></script>
+<script src="menu.js"></script>
+<script src="results.js"></script>
+<script src="item.js"></script>
+<script src="js/dummy.js"></script>
+</body>
+</html>

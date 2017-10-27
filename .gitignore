@@ -1,0 +1,22 @@
+#IDEA ide
+.idea
+*.iml
+
+# logs
+logs
+
+# maven
+target
+
+# eclipse
+.settings
+.classpath
+.project
+
+# vim
+.*.swp
+.*.swo
+
+# temp files
+*~
+*.tmp
