@@ -19,6 +19,11 @@ import com.gustinmi.jetty.JettyRunner;
  */
 public class MySuite extends Suite {
 
+    @Override
+    protected String getName() {
+        return "JavaSeleniumTests";
+    }
+
     // copied from Suite
     private static Class<?>[] getAnnotatedClasses(Class<?> klass) throws InitializationError {
         Suite.SuiteClasses annotation = klass.getAnnotation(Suite.SuiteClasses.class);
@@ -47,7 +52,6 @@ public class MySuite extends Suite {
             super(klass);
 
             JettyRunner.start();
-
         }
 
         @Override

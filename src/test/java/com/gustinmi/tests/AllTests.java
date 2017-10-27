@@ -11,4 +11,5 @@ import com.gustinmi.junit.MySuite;
 @RunWith(MySuite.class)
 @SuiteClasses({ SearchingTest.class, ResultListTest.class })
 public class AllTests {
+
 }
