@@ -67,6 +67,8 @@ public class JTestDriver {
     @Before
     public void setUp() throws Exception {
         
+        // webdriver's type can be also specified by environment variable
+
         String driverName = System.getenv("webdriver.name");
         if (driverName == null || driverName.isEmpty()) driverName = "chrome";
 
@@ -105,6 +107,7 @@ public class JTestDriver {
             throw new IllegalArgumentException("Drivertype: " + driverName + "is not supported");
         }
         
+
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); // wait for all elements
         
         driver.get(Config.BASE_URL + HOMEPAGE);
@@ -125,9 +128,9 @@ public class JTestDriver {
      * @return
      */
     public WebElement $(String sel) {
-        log.info("Iščem element s selektorjem: " + sel);
+        log.info("Searching for element with selector: " + sel);
         WebElement elt = FindElementFactory.findWebElement(driver, sel);
-        log.info("Najden element");
+        log.info("Element found");
         return elt;
          
     }

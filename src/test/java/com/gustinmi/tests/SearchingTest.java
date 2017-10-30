@@ -3,9 +3,9 @@ package com.gustinmi.tests;
 import java.util.EnumSet;
 import java.util.logging.Logger;
 import org.junit.Test;
-import com.gustinmi.actions.Actions;
 import com.gustinmi.config.HtmlElementOptions;
 import com.gustinmi.config.LoggingFactory;
+import com.gustinmi.test.Actions;
 import com.gustinmi.test.engine.JTestDriver;
 
 public class SearchingTest extends JTestDriver {

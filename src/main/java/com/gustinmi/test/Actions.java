@@ -1,4 +1,4 @@
-package com.gustinmi.actions;
+package com.gustinmi.test;
 
 import java.util.EnumSet;
 import java.util.logging.Logger;

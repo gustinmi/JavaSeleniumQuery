@@ -23,7 +23,7 @@ public class LoggingFactory {
         
         // We use the third stack element; second is this method, first is .getStackTrace()
         
-        StackTraceElement myCaller = Thread.currentThread().getStackTrace()[2];
+        final StackTraceElement myCaller = Thread.currentThread().getStackTrace()[2];
         
         return Logger.getLogger(myCaller.getClassName());
     }

@@ -13,7 +13,7 @@ public class Config {
     public static final int JETTY_PORT = 8380;
 
     /**
-     * Base URL of test webaplication
+     * Base URL of test webaplication. It can be any remote or local webpage
      */
     public static final String BASE_URL = String.format("http://localhost:%s/", JETTY_PORT);
 
@@ -22,6 +22,9 @@ public class Config {
      */
     public static final String WEB_ROOT = "c:\\Users\\gustin\\workspace\\javaselkju\\javaselkju\\src\\test\\resources\\webapp\\";
 
+    /**
+     *  Should jetty dump std error to log file 
+     */
     public static final boolean DUMP_JETTY_STDERR = false;
 
     /**
