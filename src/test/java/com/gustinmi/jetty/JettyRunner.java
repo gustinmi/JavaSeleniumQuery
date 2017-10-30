@@ -18,6 +18,12 @@ import org.junit.Ignore;
 import org.junit.Test;
 import com.gustinmi.config.LoggingFactory;
 
+/** Starts embedded web server, with webserver root dir pointing to src/test/resources/webapp
+ * Local webserver is here for demonstration purposes. Root dir can be any location. 
+ * The purpose of webserver is also the ability to execute ajax requests on the demo.
+ * @author gustin
+ *
+ */
 public class JettyRunner {
 
     public static final Logger log = LoggingFactory.loggerForThisClass();
@@ -26,6 +32,11 @@ public class JettyRunner {
 
     private final static AtomicBoolean alreadyStarted = new AtomicBoolean(false);
 
+    /** Instance of the jetty webserver. This instance is singleton, and will be run in background, after executing testsuite 
+     * @see com.gustinmi.junit.MySuite
+     * @author gustin
+     *
+     */
     public static class TesthostHandler extends AbstractHandler {
 
         protected Server server;

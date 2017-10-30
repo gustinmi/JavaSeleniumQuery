@@ -3,7 +3,7 @@
     <groupId>com.gustinmi.tests</groupId>
     <artifactId>javaselkju</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0.0</version>
     <name>JavaSeleniumQuery - javaselkju</name>
     <url>http://maven.apache.org</url>
     <description>Write Selenium Tests in jquery like syntax.</description>

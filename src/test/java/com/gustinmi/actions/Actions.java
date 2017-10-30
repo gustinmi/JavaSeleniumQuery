@@ -9,8 +9,19 @@ import com.gustinmi.config.LoggingFactory;
 import com.gustinmi.test.engine.WebAction;
 import com.gustinmi.test.engine.WebdriverTestAction;
 
+/** Actions are reocurring patterns for executing some common tasks on HTML page.
+ * They aim at reducing number of boilerplate code (and copy paste) for executing some of the most
+ * common task. For specific actions you can use web driver right from unit test
+ * @see com.gustinmi.test.engine.JTestDriver#$
+ * @author gustin
+ *
+ */
 public class Actions {
 
+    /** Fills a HTML <input> field and triggers blur event if requested
+     * @author gustin
+     *
+     */
     public static class FillinputField extends WebAction implements WebdriverTestAction {
     
         public static final Logger log = LoggingFactory.loggerForThisClass();
@@ -59,6 +70,10 @@ public class Actions {
     
     }
 
+    /** Clicks a button or any other clickable element on the page
+     * @author gustin
+     *
+     */
     public static class ClickButton extends WebAction implements WebdriverTestAction {
 
         public static final Logger log = LoggingFactory.loggerForThisClass();

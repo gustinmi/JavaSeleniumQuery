@@ -120,8 +120,10 @@ public class JTestDriver {
         driver.quit();
     }
     
-    // Factory proxy za iskanje elementov
-    
+    /** Factory proxy for accessing HTMl DOM directly on unit test
+     * @param sel
+     * @return
+     */
     public WebElement $(String sel) {
         log.info("Iščem element s selektorjem: " + sel);
         WebElement elt = FindElementFactory.findWebElement(driver, sel);
