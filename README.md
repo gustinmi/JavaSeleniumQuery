@@ -3,6 +3,7 @@ JavaSeleniumQuery
 Write Java Selenium Tests in jQuery like syntax and access elements with selectors generated right out from browser's Developer tools.
 ### Element selectors 
 Java functions for selecting elements are dressed up to look like jQuery \$ function. You can select elements on your page in various ways. Following selectors are supported:
+
 **ID selector**
 ```java
 WebElement btn = $("#radioButton");
@@ -23,6 +24,7 @@ List submoduls = $("#additional").findElements(By.xpath("id('additional')/div/di
 ```
 ### Getting and setting values, triggering events
 After element is selected, you manipulate it in various ways:
+
 **Click the first table row**
 ```java
 $("//*id/tbody/tr[1]").click();
