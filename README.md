@@ -5,25 +5,25 @@ Write Java Selenium Tests in jQuery like syntax and access elements with selecto
 Java functions for selecting elements are dressed up to look like jQuery \$ function. You can select elements on your page in various ways. Following selectors are supported:
 **ID selector**
 ```java
-$("#radioButton");
+WebElement btn = $("#radioButton");
 ```
 **Class selector**
 ```java
-WebElement cb = $(".cbOne");
+WebElement cbBox = $(".cbOne");
 ```
 **XPATH selector**
 ```java
-$(”//*[@id=\"resultView\"]/li/article/div/h2/a”);
+$(”//*[@id=\"resultView\"]/li/article/div/h2/a”); // all links in DIV
 ```
 **Parent selectors**
 ```java
 $("#additional").findElement(By.className("btnClose"));
-WebElement flag = status.findElement(By.tagName("div"));
-List submoduls = table.findElements(By.xpath("id('table2')/div/div/div"));
+WebElement flag = $("#additional").findElement(By.tagName("div"));
+List submoduls = $("#additional").findElements(By.xpath("id('additional')/div/div/div"));
 ```
 ### Getting and setting values, triggering events
 After element is selected, you manipulate it in various ways:
-**Click first table row **
+**Click the first table row**
 ```java
 $("//*id/tbody/tr[1]").click();
 ```
@@ -102,8 +102,10 @@ If you need help with Maven, please read my article : [Maven reference for Java 
 
 If you need help with installing Java Development Kit on you machine, please read my article [Developing Java Webapps](https://docs.google.com/document/d/e/2PACX-1vQeT0f2T1fW0IB3Ue37dEImvnSHQ3C1Fhj36ye1hzhn6ZIC-7YKPAcQThdXAy78JJ55IN3pBSfZmAXp/pub)
 
+You can test any web application, as long as you have access to it. Web application may require certificate or other form of authentication. This data must (can) be entered manually. Only data that can we filled via HTTP headers can be entered automatically.
+
 ## Background
-Selenium is framework for automating web browser clicking (so to speak). Writing Selenium code in java gives you ability, to reuse the code you already have in application to be tested (nums, utility classes, database access code). Also writing tests in object oriented language, gives you great flexibility and code reuse.
+Selenium is a framework for automating web browser clicking (so to speak). Writing Selenium code in java gives you ability, to reuse the code you already have in application to be tested (nums, utility classes, database access code). Also writing tests in object oriented language, gives you great flexibility and code reuse.
 ### Setup
 For these example to run, you need Java 1.8, Maven and browsers with webdrivers. All webdrivers can be easily downloaded from internet. This project also includes the test website and embedded webserver, so that you can see everything in action. With Maven build tool, all librarires are downloaded automatically.
 You do not need any IDE or any special librarires. Load wedrivers here :
