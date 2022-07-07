@@ -13,7 +13,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
         <debug.build>true</debug.build>
-        <jettyVersion>9.4.17.v20190418</jettyVersion>
+        <jettyVersion>10.0.10</jettyVersion>
         <runSuite>com.gustinmi.tests.AllTests.java</runSuite>
     </properties>
     <build>
